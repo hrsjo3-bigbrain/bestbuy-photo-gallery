@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 const { Schema } = mongoose;
 
-mongoose.connect('mongodb://localhost/bestbuy', { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect('mongodb://172.17.0.2:27017', { useNewUrlParser: true, useUnifiedTopology: true });
 
 // remember to finish this connection and create the bestbuy db
 const db = mongoose.connection;

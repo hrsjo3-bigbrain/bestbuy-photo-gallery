@@ -78,7 +78,6 @@ const seed = () => {
       });
   }
 };
-seed();
 
 module.exports = {
   seed,

@@ -59,10 +59,10 @@
 }
 
 .productModal {
-  position: absolute;
-  float:left;
-  left: 0%;
-  top: 0%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   border: 1px solid #c5cbd5;
   box-shadow: 0 0 2px 0 rgb(0 0 0 / 30%);
   border-radius: 4px;

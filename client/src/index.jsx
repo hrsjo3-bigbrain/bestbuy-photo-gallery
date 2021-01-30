@@ -16,13 +16,12 @@ class App extends React.Component {
     };
   }
 
-  // airpods Max id 600c6e2499b914700ff047a5
   componentDidMount() {
     this.getProduct();
   }
 
   getProduct() {
-    $.get(`http://localhost:3001/api${window.location.pathname}`, (product) => {
+    $.get(`http://54.151.82.151/api${window.location.pathname}`, (product) => {
       this.setState({
         product,
       });
@@ -70,4 +69,4 @@ class App extends React.Component {
   }
 }
 
-ReactDOM.render(<App />, document.getElementById('app'));
+ReactDOM.render(<App />, document.getElementById('service1'));

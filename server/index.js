@@ -2,6 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const { getProduct } = require('../database/query.js');
+const { seed } = require('../database/seed.js');
 
 const app = express();
 
@@ -13,6 +14,7 @@ app.use(cors());
 app.use(bodyParser.urlencoded({
   extended: false,
 }));
+app.use('/bundle', express.static(`${__dirname}/../client/dist/bundle.js`));
 app.use('/products/:id', express.static(`${__dirname}/../client/dist`));
 
 app.get('/', (req, res) => {
@@ -34,6 +36,9 @@ app.get('/api/products/:id', (req, res) => {
     }
   });
 });
+
+// seed the database
+seed();
 
 app.listen(port, () => {
   // eslint-disable-next-line no-console
