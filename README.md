@@ -1,2 +1,2 @@
-# bestbuy-photo-gallery
+# betterbuy-photo-gallery
 Product title and main photos 
